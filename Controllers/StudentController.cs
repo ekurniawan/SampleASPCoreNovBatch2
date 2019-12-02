@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +11,7 @@ using SampleASPCore.Services;
 
 namespace SampleASPCore.Controllers
 {
+    [Authorize]
     public class StudentController : Controller
     {
         private IStudent _student;
@@ -19,6 +21,7 @@ namespace SampleASPCore.Controllers
         }
 
         // GET: Student
+        [AllowAnonymous]
         public async Task<ActionResult> Index()
         {
             if (TempData["pesan"] != null)

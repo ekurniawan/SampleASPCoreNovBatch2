@@ -62,11 +62,11 @@ namespace SampleASPCore
             app.UseHttpsRedirection();
             app.UseSession();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
-
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

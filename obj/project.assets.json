@@ -14,6 +14,18 @@
           "lib/netstandard2.0/Dapper.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.0.0": {
         "type": "package",
         "compile": {
@@ -2672,6 +2684,19 @@
         "lib/net461/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.0.0": {
+      "sha512": "u35Ht7mTTGiEbrU6MuzxnNjuLmkSB9+oOYIoDmS2w7tgU9w8JZVnpE08eJl3+hP8SShrVuKc4Eoup75bPs29cQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.google/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Google.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Authentication.Google.xml",
+        "microsoft.aspnetcore.authentication.google.3.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.0.0": {
@@ -8545,6 +8570,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Dapper >= 2.0.30",
+      "Microsoft.AspNetCore.Authentication.Google >= 3.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.0.0",
       "Microsoft.AspNetCore.Identity.UI >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
@@ -8602,6 +8628,10 @@
           "Dapper": {
             "target": "Package",
             "version": "[2.0.30, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Google": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",

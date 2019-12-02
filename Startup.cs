@@ -50,6 +50,16 @@ namespace SampleASPCore
             services.AddTransient<IRestaurantData,RestaurantServiceDapper>();
             services.AddTransient<IStudent, StudentService>();
             services.AddTransient<IEnrollment, EnrollmentService>();
+
+            services.AddAuthentication()
+             .AddGoogle(options =>
+             {
+                 IConfigurationSection googleAuthNSection =
+                     _config.GetSection("Authentication:Google");
+
+                 options.ClientId = "";
+                 options.ClientSecret = "";
+             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

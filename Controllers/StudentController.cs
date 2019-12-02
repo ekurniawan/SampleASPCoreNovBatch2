@@ -42,6 +42,7 @@ namespace SampleASPCore.Controllers
             return View("Index",models);
         }
 
+
         // GET: Student/Details/5
         public async Task<ActionResult> Details(int id)
         {

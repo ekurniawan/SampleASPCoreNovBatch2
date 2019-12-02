@@ -12,6 +12,8 @@ namespace SampleASPCore.Controllers
         //
         public IActionResult Index()
         {
+            var username = User.Identity.Name;
+            ViewBag.Username = username;
             return View();
         }
 

@@ -17,7 +17,7 @@ namespace SampleASPCore.Services
 
         public Task Execute(string subject, string message, string email)
         {
-            var client = new SendGridClient("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");
+            var client = new SendGridClient("");
             var msg = new SendGridMessage()
             {
                 From = new EmailAddress("admin@actual-training.com", 

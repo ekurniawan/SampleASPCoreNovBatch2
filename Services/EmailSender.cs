@@ -20,8 +20,8 @@ namespace SampleASPCore.Services
             var client = new SendGridClient("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");
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("erick@actual-training.com", 
-                    "Erick Kurniawan"),
+                From = new EmailAddress("admin@actual-training.com", 
+                    "Administrator"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
